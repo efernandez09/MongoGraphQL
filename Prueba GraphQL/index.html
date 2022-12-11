@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./src/css/stylesheet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <div>
+        <div class="menuNav">
+            <ul>
+                <li> <img href="./index.html" src="image/logo.jpeg" width="300" height="75"> </img></li>
+                <li> <a href="public/añadirNuevoTablon.html">Nuevo Tablón</a> </li>
+                <li> <a href="./index.html">Tableros</a> </li>
+            </ul>
+        </div>
+    </div>
+</head>
+
+
+
+<body>
+
+    <div class="container-fluid" id="container-tablones">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+
+
+
+        <a class="btn btn-primary" href="/Producto1_JSectarios/public/añadirNuevoTablon.html" style="margin-top: 30px; margin-left: 40px"
+            id="boton"> Añadir nuevo tablón</a>
+
+            <div class="card-body" >
+                <div class="card">
+                    <h2 class="card-title">Universidad</h2>
+                    <h3 class="card-subtitle"> Eric Fernández Pérez</h3>
+                    <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident praesentium
+                            cupiditate 
+                            ipsum facere impedit error </p>
+                    <a href="./public/toDoList.html" class="btn btn-primary">Acceder</a>
+                    <button onclick="window.modal.showModal()" class="btn btn-danger float-end"
+                            id="eliminar">Eliminar</button>
+        
+                    <dialog id="modal">
+                        <h2>¿Esta seguro que desea eliminar este tablón?</h2>
+        
+                        <button class="btn btn-outline-danger" onclick="deleteTablon()"
+                                style="margin-top: 25px; margin-right: 400px; margin-left: 15px;" type="submit" id="delbtn">Si</button>
+                        <button class="btn btn-outline-success" onclick="window.modal.close()">No</button>
+                    </dialog>
+                </div>
+            </div>
+    </div>                                                              
+</div>
+    <script src="/Producto1_JSectarios/src/deleteTab.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="/Producto1_JSectarios/src/showTab.js"></script>
+</body>
+
+</html>
