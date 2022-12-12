@@ -1,5 +1,8 @@
-import express from "express";
-import {ADD_TAB} from '../../src/controllers/tab_controller';
-const router = express.Router();
+import { Router } from "express";
+import { getAllTabs } from '../../src/controllers/tab_controller';
+const router = Router();
 
-router.post('/addTab', ADD_TAB);
+router.get('/getAllTabs', getAllTabs);
+
+export {router};
+

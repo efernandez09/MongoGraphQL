@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import express from "express";
 const app = express();
+import { router as tabRoutes } from './server/routes/tab_routes.js';
 
 // URL Connexion
 const MONGODB_URI = 'mongodb+srv://Pablo:pablo02@cluster0.vve9mwe.mongodb.net/test'
@@ -36,7 +37,11 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use('/api/tabs', tabRoutes);
+// Middleware para los tablones
+app.use('/api/tabs', tabRoutes);
+
+// Middleware para las tareas
+app.use('/api/task');
 
 app.get("/", (req,res) => {
     res.send('Inicia el Frontal de la aplicación con la extensión de "Live Server", este es el puerto en el que se aloja el servidor.')
